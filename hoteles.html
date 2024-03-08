@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Hoteles - Wanderer</title>
+    <link rel="icon" href="./media/swallow.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="./componente/hotel.js" defer></script>
+</head>
+<body>
+    <header>
+        <div id="logoHeader">
+            <img src="./media/swallow.svg" alt="logo">
+            <h1>Wanderer</h1>
+        </div>
+        <div id="login" onclick="toLogin()">
+            <i class="fas fa-user"></i> &nbsp; Iniciar sesión
+        </div>
+    </header>
+    <nav>
+        <a href="./index.html">Home</a>|
+        <a href="#">Paquetes de viaje</a>|
+        <a href="#">Sobre nosotros</a>|
+        <a href="#">Contacto</a>
+    </nav>
+    <main>
+        <aside>
+            <br>
+            <h3 class="sectionTitle">Filtros</h3>
+            <div>
+                <form>
+                    <h4>Precio por noche</h4>
+                    <input type="checkbox" id="basura" value="0 - 50 €">
+                    <label for="basura">0 - 50 €</label><br>
+                    <input type="checkbox" id="barato" value="50 - 100 €">
+                    <label for="barato">50 - 100 €</label><br>
+                    <input type="checkbox" id="medio" value="100 - 150 €">
+                    <label for="medio">100 - 150 €</label><br>
+                    <input type="checkbox" id="bueno" value="150 - 200 €">
+                    <label for="bueno">150 - 200 €</label><br>
+                    <input type="checkbox" id="paRicos" value="+200 €">
+                    <label for="paRicos">+200 €</label><br>
+                    <hr>
+                    <h4>Tipo de alojamiento</h4>
+                    <input type="checkbox" id="apartamento" value="Apartamento">
+                    <label for="apartamento">Apartamento</label><br>
+                    <input type="checkbox" id="hotel" value="Hotel">
+                    <label for="hotel">Hotel</label><br>
+                    <input type="checkbox" id="motel" value="Motel">
+                    <label for="motel">Motel</label><br>
+                    <hr>
+                    <h4>Categoría</h4>
+                    <input type="checkbox" id="cinco" value="5 Estrellas">
+                    <label for="cinco">5 Estrellas</label><br>
+                    <input type="checkbox" id="cuatro" value="4 Estrellas">
+                    <label for="cuatro">4 Estrellas</label><br>
+                    <input type="checkbox" id="tres" value="3 Estrellas">
+                    <label for="tres">3 Estrellas</label><br>
+                    <input type="checkbox" id="dos" value="2 Estrellas">
+                    <label for="dos">2 Estrellas</label><br>
+                    <input type="checkbox" id="uno" value="1 Estrella">
+                    <label for="uno">1 Estrella</label><br>
+                    <hr>
+                    <h4>Valoración</h4>
+                    <input type="checkbox" id="excelente" value="Excelente">
+                    <label for="excelente">Excelente</label><br>
+                    <input type="checkbox" id="muy" value="Muy bueno">
+                    <label for="muy">Muy bueno</label><br>
+                    <input type="checkbox" id="bueno" value="Bueno">
+                    <label for="bueno">Bueno</label><br>
+                    <hr>
+                    <h4>Régimen</h4>
+                    <input type="checkbox" id="solo" value="Solo alojamiento">
+                    <label for="solo">Solo alojamiento</label><br>
+                    <input type="checkbox" id="desayuno" value="Con desayuno">
+                    <label for="desayuno">Con desayuno</label><br>
+                    <input type="checkbox" id="cena" value="Desayuno y cena">
+                    <label for="cena">Desayuno y cena</label><br>
+                    <hr>
+                    <h4>Servicios</h4>
+                    <input type="checkbox" id="wifi" value="Wifi gratis">
+                    <label for="wifi">Wifi gratis</label><br>
+                    <input type="checkbox" id="parking" value="Parking">
+                    <label for="parking">Parking</label><br>
+                    <input type="checkbox" id="restaurante" value="Restaurante">
+                    <label for="restaurante">Restaurante</label><br>
+                    <input type="checkbox" id="gym" value="Gimnasio">
+                    <label for="gym">Gimnasio</label><br>
+                    <input type="checkbox" id="piscina" value="Piscina">
+                    <label for="piscina">Piscina</label><br>
+                </form>
+            </div>
+        </aside>
+        <section>
+            <h2 class="sectionTitle">Hoteles</h2>
+            <div class="contenedorHoteles">
+                <hotel-new desc="El Hotel Jengis está situado en el centro de algún lugar, a 50 metros de la Pequeña Vía. El alojamiento proporciona WiFi gratuita."
+                destino="Hotel Jengis" precio="89€/noche" imagen="./editadas/hotel1.jpg" title="Imagen generada por 'Midjourny'"></hotel-new>
+                <hotel-new desc="El Hotel Falacias está situado en el centro de algún lugar, a 50 metros de la Pequeña Vía. El alojamiento proporciona WiFi gratuita."
+                destino="Hotel Falacias" precio="89€/noche" imagen="./editadas/hotel2.jpg" title="Imagen generada por 'Midjourny'"></hotel-new>
+                <hotel-new desc="El Hotel Jengis está situado en el centro de algún lugar, a 50 metros de la Pequeña Vía. El alojamiento proporciona WiFi gratuita."
+                destino="Hotel Patrañas" precio="89€/noche" imagen="./editadas/hotel3.jpg" title="Imagen generada por 'Midjourny'"></hotel-new>
+                <hotel-new desc="El Hotel Patrañas está situado en el centro de algún lugar, a 50 metros de la Pequeña Vía. El alojamiento proporciona WiFi gratuita."
+                destino="Hotel Dame Morax" precio="89€/noche" imagen="./editadas/hotel4.jpg" title="Imagen generada por 'Midjourny'"></hotel-new>
+                <div id="banner_rec"><img src="./editadas/banner_rec.jpg" title="Elaboración propia"></div>
+                <hotel-new desc="El Hotel Dame Morax está situado en el centro de algún lugar, a 50 metros de la Pequeña Vía. El alojamiento proporciona WiFi gratuita."
+                destino="Hotel Llorando fuerte" precio="89€/noche" imagen="./editadas/hotel5.jpg" title="Imagen generada por 'Midjourny'"></hotel-new>
+                <hotel-new desc="El Hotel Llorando fuerte está situado en el centro de algún lugar, a 50 metros de la Pequeña Vía. El alojamiento proporciona WiFi gratuita."
+                destino="Hotel Jengis" precio="89€/noche" imagen="./editadas/hotel6.jpg" title="Imagen generada por 'Midjourny'"></hotel-new>
+                <hotel-new desc="El Hotel Sauce Llorón está situado en el centro de algún lugar, a 50 metros de la Pequeña Vía. El alojamiento proporciona WiFi gratuita."
+                destino="Hotel Sauce Llorón" precio="89€/noche" imagen="./editadas/hotel7.jpg" title="Imagen generada por 'Midjourny'"></hotel-new>
+                <hotel-new desc="El Hotel Tengo Sueño está situado en el centro de algún lugar, a 50 metros de la Pequeña Vía. El alojamiento proporciona WiFi gratuita."
+                destino="Hotel Tengo Sueño" precio="69€/noche" imagen="./editadas/hotel8.jpg" title="Imagen generada por 'Midjourny'"></hotel-new>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div id="footer">
+            <div id="logoFooter">
+                <img src="./media/swallow.svg" alt="logo">
+                <h1>Wanderer</h1>
+            </div>
+        </div>
+        <div id="footer-social">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div>
+            <p>Dirección: Calle Mitrasero, 123, Ciudad de Merde</p>
+            <p>Teléfono: +34 638 77 41 07</p>
+            <p>Email: info@wandererviajes.com</p>
+            <p>&copy; 2024 Wanderer</p>
+    </footer>
+    <script>
+        function toLogin(){
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #d1813c;
+}
+
+#logoHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+#logoHeader > img {
+  width: 80px;
+  filter: drop-shadow(1px 1px 1px #111111) brightness(10);
+}
+
+.loginContenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: -70px;
+}
+
+.loginForm {
+  background-color: #fff;
+  padding: 20px;
+  width: 50%;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+}
+
+.loginForm h2 {
+  text-align: center;
+}
+
+.loginForm input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.loginForm button {
+  width: 100%;
+  padding: 10px;
+  background-color: #d1813c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.loginForm div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+p {
+  position: absolute;
+  margin-top: -210px;
+ 
+}

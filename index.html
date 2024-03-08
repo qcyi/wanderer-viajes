@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderer Viajes</title>
+    <link rel="icon" href="./media/swallow.svg">
+    <script src="script.js" defer></script>
+    <script src="./componente/oferta.js" defer></script>
+    <script src="./componente/popular.js" defer></script>
+    <script src="./componente/opinion.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <audio id="backgroundMusic" src="./media/jazzy.mp3" type="audio" autoplay loop title="Music by 'Yurii Semchyshyn' from 'Pixabay' - Creative Commons dominio público CC0"></audio>
+        <div id="logoHeader">
+            <img src="./media/swallow.svg" alt="logo">
+            <h1>Wanderer</h1>
+        </div>
+        <h2 id="title">Toca cesped. Respira aire.</h2>
+        <div class="videos-container" title="Multiples videos modificados bajo la 'Licencia de uso de Freepik'">
+            <video src="./media/videosHome.mp4" preload="auto" autoplay muted loop></video>
+        </div>
+        <div id="login" onclick="toLogin()">
+            <i class="fas fa-user"></i> &nbsp; Iniciar sesión
+        </div>
+    </header>
+    <nav>
+        <a href="./index.html">Home</a>|
+        <a href="#">Paquetes de viaje</a>|
+        <a href="#">Sobre nosotros</a>|
+        <a href="#">Contacto</a>
+    </nav>
+    <div class="options">
+        <ul>
+            <li id="hotel">Hoteles</li>
+            <li>Vuelos</li>
+            <li>Vuelo + Hotel</li>
+            <li>Cruceros</li>
+            <li>Trenes</li>
+        </ul>
+        <div class="form">
+            <form>
+                <div>
+                    <label for="destino">LUGAR DE DESTINO</label>
+                    <input type="text" id="destino">
+                </div>
+                <div>
+                    <label for="entrada">FECHA DE ENTRADA</label>
+                    <input type="text" id="entrada">
+                </div>
+                <div>
+                    <label for="salida">FECHA DE SALIDA</label>
+                    <input type="text" id="salida">
+                </div>
+                <div>
+                    <label for="habitaciones">HABITACIONES</label>
+                    <input type="text" id="habitaciones">
+                </div>
+                <input type="button" name="submit" value="Buscar" onclick="toHoteles()">
+            </form>
+        </div>
+    </div>
+    <section>
+        <aside><img src="editadas/banner_lateral.jpg" title="Elaboración propia"></aside>
+        <h2 class="sectionTitle">Mejores ofertas</h2>
+        <div class="contenedorOfertas">
+            <oferta-new fecha="12 jul" destino="Indonesia" precio="53€" imagen="editadas/oferta1.jpg"
+                title="Imagen de 'jcomp' bajo la 'Licencia de uso de Freepik'"></oferta-new>
+            <oferta-new fecha="12 jul" destino="Barcelona" precio="49€" imagen="editadas/oferta2.jpg"
+                title="Imagen de 'bearfotos' bajo la 'Licencia de uso de Freepik'"></oferta-new>
+            <oferta-new fecha="12 jul" destino="Caribe" precio="66€" imagen="editadas/oferta3.jpg"
+                title="Imagen de 'mrsiraphol' bajo la 'Licencia de uso de Freepik'"></oferta-new>
+            <oferta-new fecha="12 jul" destino="Bora Bora" precio="76€" imagen="editadas/oferta4.jpg"
+                title="Imagen de 'mrsiraphol' bajo la 'Licencia de uso de Freepik'"></oferta-new>
+            <oferta-new fecha="12 jul" destino="Grecia" precio="68€" imagen="editadas/oferta5.jpg"
+                title="Imagen de 'vwalakte' bajo la 'Licencia de uso de Freepik'"></oferta-new>
+            <oferta-new fecha="12 jul" destino="Perú" precio="77€" imagen="editadas/oferta6.jpg"
+                title="Imagen de 'wirestock' bajo la 'Licencia de uso de Freepik'"></oferta-new>
+            <oferta-new fecha="12 jul" destino="Dubai" precio="63€" imagen="editadas/oferta7.jpg"
+                title="Imagen de 'vwalakte' bajo la 'Licencia de uso de Freepik'"></oferta-new>
+            <oferta-new fecha="12 jul" destino="Estambul" precio="72€" imagen="editadas/oferta8.jpg"
+                title="Imagen de 'Oleksandr Ryzhkov' bajo la 'Licencia de uso de Freepik'"></oferta-new>
+        </div>
+    </section>
+    <section>
+        <h2 class="sectionTitle">Destinos populares</h2>
+        <div class="populares">
+            <button class="scroll-left" id="popular-izquierda">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                    <path
+                        d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+                </svg>
+            </button>
+            <div class="contenedorPopulares" id="contenedor-populares">
+                <popular-new desc="Descripción del destino." destino="Islas Caimán" precio="31€"
+                    imagen="editadas/popular1.jpg" title="Imagen generada por 'Midjourny'"></popular-new>
+                <popular-new desc="Mu' guapo." destino="Vietnam" precio="37€" imagen="editadas/popular2.jpg"
+                    title="Imagen de 'tawatchai07' bajo la 'Licencia de uso de Freepik'"></popular-new>
+                <popular-new desc="Fuimos a la misma escuela." destino="Nepal" precio="44€"
+                    imagen="editadas/popular5.jpg" title="Imagen generada por 'Midjourny'"></popular-new>
+                <popular-new desc="Simetríaaa..." destino="Mondstadt" precio="94€" imagen="editadas/popular8.jpg"
+                    title="Imagen generada por 'Midjourny'"></popular-new>
+                <popular-new desc="yourrthighness99." destino="Marruecos" precio="71€" imagen="editadas/popular7.jpg"
+                    title="Imagen de 'wirestock' bajo la 'Licencia de uso de Freepik'"></popular-new>
+                <popular-new desc="Cosas, cosas, cosas..." destino="Londres" precio="73€" imagen="editadas/popular6.jpg"
+                    title="Imagen de 'vwalakte' bajo la 'Licencia de uso de Freepik'"></popular-new>
+            </div>
+            <button class="scroll-right" id="popular-derecha">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                    <path
+                        d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+                </svg>
+            </button>
+        </div>
+    </section>
+    <section class="sectionGlobo">
+        <h2>No tengo ni idea</h2>
+        <model-viewer auto-rotate rotation-per-second="10deg" loading="auto" reveal="auto" src="./media/globo.glb"
+            id="globo"></model-viewer>
+        <button onclick="girar()" id="btnAbrirPopup">¡Sorpréndeme!</button>
+        <div id="popup" class="popup-overlay">
+            <div class="popup-content">
+                <span class="close" id="btnCerrarPopup">&times;</span>
+                <br>
+                <h2>¡¿Qué te parece un fin de semana emocionante en la casa de tus padres?!</h2><br>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2 class="sectionTitle">Tu opinión no importa</h2>
+        <div class="opiniones">
+            <button class="scroll-left" id="opinion-izquierda">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                    <path
+                        d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+                </svg>
+            </button>
+            <div class="contenedorOpiniones" id="contenedor-opiniones">
+                <opinion-new opinion="Especutacular" detalle="Se merece 10/10" autor="Elver Galarga"
+                    estrellas="5"></opinion-new>
+                <opinion-new opinion="A lo grande" detalle="Me lo he pasado pipa" autor="Elba Ginnon"
+                    estrellas="4"></opinion-new>
+                <opinion-new opinion="Especutacular" detalle="Se merece 10/10" autor="Mar Mota"
+                    estrellas="5"></opinion-new>
+                <opinion-new opinion="Especutacular" detalle="Se merece 10/10" autor="Mika Lamar"
+                    estrellas="5"></opinion-new>
+                <opinion-new opinion="Especutacular" detalle="Se merece 10/10" autor="Sol Lete"
+                    estrellas="5"></opinion-new>
+                <opinion-new opinion="Maravilloso" detalle="Se merece 9/10" autor="Benito Camela"
+                    estrellas="4.5"></opinion-new>
+                <opinion-new opinion="Meh" detalle="Se merece 8/10" autor="Ana Bohueles" estrellas="4"></opinion-new>
+                <opinion-new opinion="De puta madre" detalle="Me he bañado por primera vez" autor="Ana Bohueles"
+                    estrellas="1.5"></opinion-new>
+            </div>
+            <button class="scroll-right" id="opinion-derecha">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                    <path
+                        d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+                </svg>
+            </button>
+        </div>
+    </section>
+    <footer>
+        <div id="footer">
+            <div id="logoFooter">
+                <img src="./media/swallow.svg" alt="logo">
+                <h1>Wanderer</h1>
+            </div>
+        </div>
+        <div id="footer-social">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <div>
+            <p>Dirección: Calle Mitrasero, 123, Ciudad de Merde</p>
+            <p>Teléfono: +34 638 77 41 07</p>
+            <p>Email: info@wandererviajes.com</p>
+            <p>&copy; 2024 Wanderer</p>
+    </footer>
+    <script>
+        function girar() {
+            var modelo = document.getElementById('globo');
+            modelo.setAttribute('rotation-per-second', '400deg');
+            setTimeout(function () {
+                modelo.setAttribute('rotation-per-second', '0deg');
+            }, 2000);
+            setTimeout(function () {
+                modelo.setAttribute('rotation-per-second', '10deg');
+            }, 3000);
+        }
+        function toHoteles() {
+            window.location.href = "hoteles.html";
+        }
+        function toLogin(){
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+
+</html>

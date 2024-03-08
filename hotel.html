@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style3.css">
+        <title>Hotel - Wanderer</title>
+        <link rel="icon" href="./media/swallow.svg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <script src="./componente/hotel.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <div id="logoHeader">
+                <img src="./media/swallow.svg" alt="logo">
+                <h1>Wanderer</h1>
+            </div>
+            <div id="login" onclick="toLogin()">
+                <i class="fas fa-user"></i> &nbsp; Iniciar sesión
+            </div>
+        </header>
+        <nav>
+            <a href="./index.html">Home</a>|
+            <a href="#">Paquetes de viaje</a>|
+            <a href="#">Sobre nosotros</a>|
+            <a href="#">Contacto</a>
+        </nav>
+        <main>
+            <h2>Gran Hotel Goth</h2>
+            <section>
+                <div id="imagenes">
+                    <img id="bg_img" src="./media/hotel1.jpg">
+                    <img class="sm_img" src="./media/hotel2.jpg">
+                    <img class="sm_img" src="./media/hotel3.jpg">
+                    <img class="sm_img" src="./media/hotel4.jpg">
+                </div>
+                <div id="otros">
+                    <iframe loading="lazy" allowfullscreen
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12663.173903248094!2d-0.8780770477294822!3d41.64882259577839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5965d9a1c4f21%3A0xbba2cded66b8b49!2sZaragoza%2C%20Espa%C3%B1a!5e0!3m2!1ses!2suk!4v1645183244698!5m2!1ses!2suk">
+                    </iframe>
+                    <div id="precios">
+                        <span id="anterior">230€</span> <span id="nuevo">184€</span>
+                        <p id="texto">Incluye impuestos y cargos</p>
+                        <button>Realizar reserva</button>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div id="info">
+                    <br><br><hr>
+                    <br><br><br>
+                    <h2>Sobre el alojamiento</h2>
+                    <p> El Gran Hotel Goth presenta un diseño exclusivo y vanguardista obra de arquitectos de fama mundial como Norman Foster, Jean Nouvel y Zaha Hadid.<br>
+                        Todas las plantas han sido creadas por un arquitecto internacional distinto. Las habitaciones incluyen 1 cama grande o 2 individuales y smart TV de pantalla plana con dispositivo de transmisión audiovisual Chromecast.
+                        El restaurante del hotel sirve versiones modernas de platos tradicionales muy españoles. Los huéspedes también podrán disfrutar de terraza, jardín y un bar en la última planta con vistas magníficas a Hehe.<br>
+                        El establecimiento Gran Hotel Goth se encuentra en la avenida de Rascatraseros, a solo 5 minutos a pie del exclusivo barrio Atracos y a unos 30 minutos también a pie del paseo de la Pesadilla y del estadio de torturas.
+                        El hotel está a solo 200 metros de la estación de metro Clémentine.<br>
+                        Lo siguiente no tiene sentido. Gibbet rum lugger lass gun crack Jennys tea cup marooned deadlights stern bilge rat. Ho Jack Ketch line fluke jack black spot brigantine gabion reef Cat o'nine tails. Chase gabion Pieces of Eight lateen sail bilge rat pinnace list starboard Spanish Main lookout.<br>
+                        Gangplank tender smartly crack Jennys tea cup knave maroon galleon fire ship jury mast parrel. Wherry jack black spot blow the man down haul wind take a caulk Chain Shot walk the plank ye tackle. Tender avast barque lad gun fire in the hole Corsair Davy Jones' Locker Brethren of the Coast smartly.
+                        Jack Tar come about careen walk the plank bowsprit Pieces of Eight handsomely matey gaff Jack Ketch. Gunwalls stern holystone belaying pin rope's end wench parley broadside transom reef. Schooner jib sloop snow blow the man down broadside draught pink gunwalls gabion.</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div id="footer">
+                <div id="logoFooter">
+                    <img src="./media/swallow.svg" alt="logo">
+                    <h1>Wanderer</h1>
+                </div>
+            </div>
+            <div id="footer-social">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div>
+                <p>Dirección: Calle Mitrasero, 123, Ciudad de Merde</p>
+                <p>Teléfono: +34 638 77 41 07</p>
+                <p>Email: info@wandererviajes.com</p>
+                <p>&copy; 2024 Wanderer</p>
+        </footer>
+        <script>
+            function toLogin(){
+            window.location.href = "login.html";
+        }
+        </script>
+    </body>
+</html>

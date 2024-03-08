@@ -1,3 +1,4 @@
+  // Cosas para que los populares se deslicen
 document.addEventListener("DOMContentLoaded", function () {
   var contenedorPopu = document.getElementById("contenedor-populares");
   var popularDer = document.getElementById("popular-derecha");
@@ -5,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var popuWidth = contenedorPopu.offsetWidth;
   var popuScroll = contenedorPopu.scrollWidth;
   var popuPos = 0;
+
 
   popularDer.addEventListener("click", function () {
     popuPos += popuWidth;
@@ -29,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Lo mismo que lo popus
 document.addEventListener("DOMContentLoaded", function () {
   var contenedorOpi = document.getElementById("contenedor-opiniones");
   var opiDer = document.getElementById("opinion-derecha");
@@ -60,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Cosas de la barra de búsqueda
 const input = document.getElementsByTagName("input");
 const label = document.getElementsByTagName("label");
 
@@ -91,24 +95,5 @@ document.addEventListener('DOMContentLoaded', function() {
   btnCerrarPopup.addEventListener('click', function() {
     popup.style.display = 'none';
     document.body.classList.remove('no-scroll');
-  });
-});
-
-
-// Cosas de la música
-document.addEventListener('DOMContentLoaded', function() {
-  var backgroundMusic = document.getElementById('backgroundMusic');
-  if (sessionStorage.getItem('musicPlaying') === 'true') {
-    backgroundMusic.play();
-  }
-
-  backgroundMusic.addEventListener('click', function() {
-    if (backgroundMusic.paused) {
-      backgroundMusic.play();
-      sessionStorage.setItem('musicPlaying', 'true');
-    } else {
-      backgroundMusic.pause();
-      sessionStorage.setItem('musicPlaying', 'false');
-    }
   });
 });
